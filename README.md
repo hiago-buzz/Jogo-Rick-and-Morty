@@ -15,4 +15,4 @@
 
 ---
 
-- Para jogar [click aqui]()
+- Para jogar [click aqui](https://hiago-buzz.github.io/Jogo-Rick-and-Morty/)
