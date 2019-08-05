@@ -21,18 +21,20 @@ section{
     background-color:#f0f078;
     border-radius: 10%;
     padding: 30px;
-    box-shadow: 5px 5px 9px #eeee47;
 }
 
 h1{
     font-size: 40pt;
     color: #32b0d1;
     font-family: 'Lacquer', sans-serif;
+    text-align: center;
 }
 
 img{
-    height: 300px;
+    height: 250px;
     border-radius: 10px;
+    margin-bottom: 10px;
+    /* border: 3px #32b0d1 solid; */
 }
 
 input{
@@ -49,7 +51,7 @@ input{
     width: 100px;
     border-radius: 30px;
     height: 30px;
-    background-color: #32b0d1;
+    background-color: #32d132;
     color: white;
     cursor: pointer;
 }
@@ -59,11 +61,21 @@ input{
     width: 100px;
     border-radius: 30px;
     height: 30px;
-    background-color: #32d132;
+    background-color: #32b0d1;
     color: white;
     cursor: pointer;
 }
 p{
     font-weight: bolder;
     font-size: 16px;
+    text-align: center;
+}
+
+@media(max-width: 425px){
+    body{
+        background-color: #f0f078;
+    }
+    section{
+        width: 100%;
+    }
 }

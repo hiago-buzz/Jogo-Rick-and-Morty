@@ -2,7 +2,7 @@ let personagem = document.querySelector ('input');
 let iniciar = document.querySelector ('#iniciar');
 let tentar = document.querySelector ('#tentar');
 let imagem = document.querySelector ('img');
-let pontos = document.querySelector ('p');
+let pontos = document.querySelector ('#pontos');
 let i = 0;
 
 
@@ -21,16 +21,33 @@ pesquisarPersonagem = ()=>{
         tentar.onclick = function(){
             if(personagem.value != "" && data.name == personagem.value ){
                 i++;
-                pontos.innerHTML =`Pontuação:${i}`;
-                
+                pontos.innerHTML =`Pontuação: ${i}`;  
+                perder();     
             }
+
             else {
                 i--;
-                pontos.innerHTML =`Pontuação:${i}`;
+                pontos.innerHTML =`Pontuação: ${i}`;
+                perder();
+             
             }
-            pesquisarPersonagem();
+            pesquisarPersonagem();     
+            personagem.value = "";
+
         }
     })  
 }
 
 iniciar.onclick = pesquisarPersonagem;
+
+perder = () =>{
+    if(i<0){
+        pontos.innerHTML = `${i} Você Perdeu!`;
+        pontos.style.color = 'red';
+        setTimeout(() => {
+            i=0;
+            pontos.innerHTML="";
+            pensonagem.value = "";
+        }, 1500);
+    }
+}
